@@ -379,7 +379,6 @@ if __name__ == '__main__':
 
     logger.log("creating data loader...")
     split = 'test'
-    breakpoint()
     gt_loader = get_dataset_loader(name=args.dataset, batch_size=args.batch_size, num_frames=None, split=split, hml_mode='gt', control_joint=args.control_joint, density=args.density)
     gen_loader = get_dataset_loader(name=args.dataset, batch_size=args.batch_size, num_frames=None, split=split, hml_mode='eval', control_joint=args.control_joint, density=args.density)
     num_actions = gen_loader.dataset.num_actions
